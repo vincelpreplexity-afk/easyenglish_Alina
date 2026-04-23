@@ -1,0 +1,2618 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Алина Давыдович — репетитор английского языка</title>
+<meta name="description" content="Индивидуальные онлайн-занятия английским с Алиной Давыдович. Подготовка к ОГЭ и ЕГЭ, школьная программа, разговорный английский. Дети, подростки и взрослые. Уровни A0–B2." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ------------------------------------------------------------------
+   Design tokens
+------------------------------------------------------------------ */
+:root {
+  /* Palette — warm cream + graphite + muted terracotta accent */
+  --bg: #F6F1EA;
+  --bg-alt: #EFE7DC;
+  --surface: #FBF7F1;
+  --ink: #1C1A17;
+  --ink-2: #3A362F;
+  --muted: #6B655B;
+  --line: #E4DBCD;
+  --line-2: #D9CFBE;
+  --accent: #B5543A;          /* muted terracotta */
+  --accent-ink: #8A3E2A;
+  --accent-soft: #F1DFD6;
+
+  /* Typography */
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Radii & shadows */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(28,26,23,0.04), 0 2px 6px rgba(28,26,23,0.04);
+  --shadow-md: 0 6px 18px rgba(28,26,23,0.07), 0 2px 6px rgba(28,26,23,0.04);
+  --shadow-lg: 0 20px 50px rgba(28,26,23,0.08), 0 4px 14px rgba(28,26,23,0.05);
+
+  /* Motion */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 160ms;
+  --t-med: 260ms;
+  --t-slow: 420ms;
+
+  /* Layout */
+  --container: 1160px;
+  --gutter: clamp(20px, 4vw, 40px);
+}
+
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+input, textarea, select { font: inherit; color: inherit; }
+::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.08;
+  font-variation-settings: "opsz" 36, "SOFT" 50;
+}
+p { margin: 0; color: var(--ink-2); }
+
+/* ------------------------------------------------------------------
+   Layout helpers
+------------------------------------------------------------------ */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+section {
+  padding: clamp(72px, 10vw, 130px) 0;
+  position: relative;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+.eyebrow::before {
+  content: "";
+  width: 18px; height: 1px;
+  background: var(--line-2);
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 760px;
+  margin-bottom: clamp(44px, 6vw, 72px);
+}
+.section-head h2 {
+  font-size: clamp(32px, 4.4vw, 52px);
+  line-height: 1.05;
+}
+.section-head p {
+  font-size: clamp(16px, 1.3vw, 18px);
+  color: var(--muted);
+  max-width: 620px;
+}
+
+/* ------------------------------------------------------------------
+   Buttons
+------------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: var(--r-pill);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  transition:
+    background-color var(--t-med) var(--ease),
+    color var(--t-med) var(--ease),
+    transform var(--t-med) var(--ease),
+    box-shadow var(--t-med) var(--ease),
+    border-color var(--t-med) var(--ease);
+  will-change: transform;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover {
+  background: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+.btn-primary:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line-2);
+}
+.btn-ghost:hover {
+  background: var(--surface);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.btn .arrow {
+  display: inline-block;
+  transition: transform var(--t-med) var(--ease);
+}
+.btn:hover .arrow { transform: translateX(3px); }
+
+.btn-tg {
+  background: var(--accent);
+  color: #FBF7F1;
+  box-shadow: 0 6px 18px rgba(181,84,58,0.22);
+}
+.btn-tg:hover {
+  background: var(--accent-ink);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(181,84,58,0.28);
+}
+
+/* ------------------------------------------------------------------
+   Nav
+------------------------------------------------------------------ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(246,241,234,0.72);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--t-med) var(--ease), background-color var(--t-med) var(--ease);
+}
+.nav.is-scrolled {
+  border-bottom-color: var(--line);
+  background: rgba(246,241,234,0.88);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  transition: transform var(--t-med) var(--ease);
+}
+.logo:hover .logo-dot { transform: scale(1.35); }
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 14px;
+  color: var(--ink-2);
+  position: relative;
+  padding: 6px 0;
+  transition: color var(--t-fast) var(--ease);
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--t-med) var(--ease);
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-cta { margin-left: 8px; }
+.nav-cta .btn {
+  padding: 10px 18px;
+  font-size: 14px;
+  background: var(--ink);
+  color: #FBF7F1;
+}
+.nav-cta .btn:hover { background: var(--accent); color: #FBF7F1; }
+
+@media (max-width: 820px) {
+  .nav-links a:not(.nav-cta-link) { display: none; }
+}
+
+/* ------------------------------------------------------------------
+   HERO
+------------------------------------------------------------------ */
+.hero {
+  padding-top: clamp(60px, 8vw, 100px);
+  padding-bottom: clamp(80px, 10vw, 140px);
+  position: relative;
+}
+.hero .container { position: relative; }
+.hero-visual { position: relative; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px 7px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-bottom: 28px;
+}
+.hero-tag .dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #4CAE7A;
+  box-shadow: 0 0 0 3px rgba(76,174,122,0.18);
+}
+.hero h1 {
+  font-size: clamp(42px, 6.2vw, 82px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent-ink);
+  font-weight: 400;
+}
+.hero-sub {
+  font-size: clamp(17px, 1.5vw, 20px);
+  color: var(--muted);
+  max-width: 520px;
+  margin-bottom: 36px;
+  line-height: 1.55;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.hero-meta {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(22px, 3vw, 44px);
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+  max-width: 560px;
+}
+.hero-meta div strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.hero-meta div span {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+/* Hero card / portrait area */
+.hero-visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  isolation: isolate;
+  background: #D9C2A6;
+}
+.hero-visual-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  z-index: 0;
+  transform: scale(1.02);
+  transition: transform 1200ms var(--ease);
+}
+.hero-visual:hover .hero-visual-photo { transform: scale(1.05); }
+.hero-visual::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(28,26,23,0.05) 0%, rgba(28,26,23,0) 35%, rgba(28,26,23,0.28) 78%, rgba(28,26,23,0.55) 100%),
+    linear-gradient(180deg, rgba(181,84,58,0.06), rgba(181,84,58,0) 40%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-visual-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(22px, 3vw, 32px);
+  padding-bottom: clamp(72px, 9vw, 96px);
+  color: #FBF7F1;
+  z-index: 2;
+}
+.hv-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(251,247,241,0.92);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.25);
+}
+.hv-mono {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(30px, 3.4vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #FBF7F1;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.25);
+}
+.hv-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(16px, 1.35vw, 18.5px);
+  line-height: 1.4;
+  max-width: 300px;
+  color: #FBF7F1;
+  margin: 10px 0 8px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+.hv-author {
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  color: rgba(251,247,241,0.8);
+  text-transform: uppercase;
+}
+
+/* floating chips on hero image */
+.chip {
+  position: absolute;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--ink);
+  box-shadow: var(--shadow-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  animation: float 7s var(--ease) infinite;
+}
+.chip .chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+}
+.chip-3 { bottom: 4%; right: 4%; animation-delay: 1.6s; background: rgba(251,247,241,0.96); backdrop-filter: blur(8px); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual { max-width: 460px; margin: 0 auto; aspect-ratio: 4/5; }
+  .chip-1 { left: 2%; }
+  .chip-3 { right: 2%; }
+}
+
+/* ------------------------------------------------------------------
+   Marquee / trust strip
+------------------------------------------------------------------ */
+.strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-alt);
+  padding: 22px 0;
+  overflow: hidden;
+}
+.strip-track {
+  display: flex;
+  gap: 56px;
+  white-space: nowrap;
+  animation: slide 38s linear infinite;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-2);
+  align-items: center;
+}
+.strip-track span { display: inline-flex; align-items: center; gap: 56px; }
+.strip-track .sep {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+@keyframes slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .strip-track { animation: none; }
+}
+
+/* ------------------------------------------------------------------
+   About
+------------------------------------------------------------------ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(36px, 6vw, 84px);
+  align-items: start;
+}
+.about-card {
+  position: sticky;
+  top: 100px;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+  color: #FBF7F1;
+  isolation: isolate;
+  background: #3A362F;
+}
+.about-card-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  z-index: 0;
+  transform: scale(1.02);
+  transition: transform 1400ms var(--ease);
+}
+.about-card:hover .about-card-photo { transform: scale(1.05); }
+.about-card::before {
+  content:"";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(28,26,23,0) 40%, rgba(28,26,23,0.55) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.about-card-inner {
+  position: relative;
+  z-index: 2;
+}
+.about-card-inner .sig {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #FBF7F1;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+}
+.about-card-inner .role {
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(251,247,241,0.8);
+}
+
+.about-text p {
+  font-size: clamp(17px, 1.3vw, 19px);
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin-bottom: 22px;
+}
+.about-text p:first-of-type::first-letter {
+  font-family: var(--serif);
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.9;
+  padding: 6px 10px 0 0;
+  color: var(--accent-ink);
+  font-style: italic;
+}
+.about-stats {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.about-stats div strong {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 38px);
+  display: block;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.about-stats div span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-card { position: relative; top: 0; max-width: 420px; }
+}
+
+/* ------------------------------------------------------------------
+   Services — offer list
+------------------------------------------------------------------ */
+#services { background: var(--bg-alt); }
+.offers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line-2);
+  border-bottom: 1px solid var(--line-2);
+}
+.offer {
+  padding: 36px 28px;
+  position: relative;
+  transition: background-color var(--t-med) var(--ease);
+  border-right: 1px solid var(--line-2);
+}
+.offer:last-child { border-right: 0; }
+.offer:hover { background-color: rgba(251,247,241,0.55); }
+.offer-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 14px;
+  display: block;
+}
+.offer h3 {
+  font-size: clamp(22px, 2vw, 26px);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.offer p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.offer-icon {
+  width: 34px; height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  margin-bottom: 18px;
+  color: var(--accent);
+  transition: transform var(--t-med) var(--ease), background-color var(--t-med) var(--ease), color var(--t-med) var(--ease);
+}
+.offer:hover .offer-icon {
+  background: var(--accent);
+  color: #FBF7F1;
+  transform: rotate(-8deg);
+}
+@media (max-width: 860px) {
+  .offers { grid-template-columns: 1fr; }
+  .offer { padding: 28px 0 !important; border-right: 0; }
+}
+
+/* ------------------------------------------------------------------
+   Audience
+------------------------------------------------------------------ */
+.audience {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.aud-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 32px 28px;
+  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.aud-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--line-2);
+}
+.aud-age {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--accent-ink);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.aud-card h3 {
+  font-size: clamp(22px, 2vw, 26px);
+  margin-bottom: 12px;
+}
+.aud-card p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.aud-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.aud-card li {
+  font-size: 14px;
+  color: var(--ink-2);
+  padding-left: 20px;
+  position: relative;
+}
+.aud-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 1px;
+  background: var(--accent);
+}
+@media (max-width: 860px) { .audience { grid-template-columns: 1fr; } }
+
+/* ------------------------------------------------------------------
+   Process
+------------------------------------------------------------------ */
+#process { background: var(--bg-alt); }
+.process {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(36px, 5vw, 60px);
+  align-items: start;
+}
+.process-list { display: grid; gap: 2px; }
+.step {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line-2);
+  align-items: start;
+}
+.step:last-child { border-bottom: 0; }
+.step-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 34px;
+  line-height: 1;
+  color: var(--accent-ink);
+  transition: transform var(--t-med) var(--ease);
+}
+.step:hover .step-num { transform: translateX(4px); }
+.step h4 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.step p { color: var(--muted); font-size: 15px; }
+
+.process-aside {
+  position: sticky;
+  top: 100px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(26px, 3vw, 36px);
+  box-shadow: var(--shadow-sm);
+}
+.process-aside h4 {
+  font-family: var(--serif);
+  font-size: 22px;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.process-aside p {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+.process-aside ul {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 12px;
+}
+.process-aside li {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 15px; color: var(--ink-2);
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.process-aside li:first-child { border-top: 0; padding-top: 0; }
+.process-aside li svg { color: var(--accent); flex-shrink: 0; }
+@media (max-width: 900px) {
+  .process { grid-template-columns: 1fr; }
+  .process-aside { position: relative; top: 0; }
+}
+
+/* ------------------------------------------------------------------
+   Why me
+------------------------------------------------------------------ */
+.why {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 34px 30px;
+  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+}
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.why-card h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.why-card p { color: var(--muted); font-size: 15px; line-height: 1.65; }
+.why-ico {
+  width: 40px; height: 40px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-radius: 12px;
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+  transition: transform var(--t-med) var(--ease);
+}
+.why-card:hover .why-ico { transform: scale(1.06) rotate(-4deg); }
+@media (max-width: 720px) { .why { grid-template-columns: 1fr; } }
+
+/* ------------------------------------------------------------------
+   Pricing
+------------------------------------------------------------------ */
+#pricing { background: var(--bg-alt); }
+.pricing {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(30px, 5vw, 60px);
+  align-items: center;
+}
+.price-card {
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: var(--r-lg);
+  padding: clamp(32px, 4vw, 48px);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+.price-card::before {
+  content: "";
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(181,84,58,0.55), rgba(181,84,58,0) 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+.price-tag {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 24px;
+}
+.price-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.price-amount .num {
+  font-family: var(--serif);
+  font-size: clamp(56px, 7vw, 86px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #FBF7F1;
+}
+.price-amount .unit {
+  font-size: 15px;
+  color: rgba(251,247,241,0.65);
+}
+.price-alt {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(251,247,241,0.14);
+  font-family: var(--serif);
+  font-size: 20px;
+  color: rgba(251,247,241,0.82);
+  letter-spacing: -0.01em;
+}
+.price-alt .price-alt-unit {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: rgba(251,247,241,0.55);
+  letter-spacing: 0;
+}
+.price-card p {
+  font-size: 15px;
+  color: rgba(251,247,241,0.72);
+  margin-bottom: 28px;
+  max-width: 380px;
+  line-height: 1.6;
+}
+.price-features {
+  list-style: none; padding: 0; margin: 0 0 30px;
+  display: grid; gap: 10px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 22px;
+}
+.price-features li {
+  font-size: 14.5px;
+  color: rgba(251,247,241,0.86);
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.price-features li::before {
+  content: "";
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+  margin-top: 9px;
+  flex-shrink: 0;
+}
+.price-card .btn-primary {
+  background: var(--bg);
+  color: var(--ink);
+}
+.price-card .btn-primary:hover {
+  background: var(--accent);
+  color: #FBF7F1;
+}
+.price-notes h3 {
+  font-size: clamp(28px, 3vw, 38px);
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+.price-notes p {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.65;
+}
+.price-notes ul {
+  list-style: none; padding: 0; margin: 24px 0 0;
+  display: grid; gap: 14px;
+}
+.price-notes li {
+  display: flex; gap: 14px; align-items: flex-start;
+  font-size: 15px; color: var(--ink-2);
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  transition: border-color var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.price-notes li:hover { border-color: var(--line-2); transform: translateX(2px); }
+.price-notes li strong {
+  color: var(--ink);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 2px;
+}
+@media (max-width: 860px) { .pricing { grid-template-columns: 1fr; } }
+
+/* ------------------------------------------------------------------
+   FAQ
+------------------------------------------------------------------ */
+.faq-wrap {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-top: 1px solid var(--line);
+}
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 26px 0;
+  font-family: var(--serif);
+  font-size: clamp(19px, 1.6vw, 22px);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  transition: color var(--t-fast) var(--ease);
+}
+.faq-q:hover { color: var(--accent-ink); }
+.faq-icon {
+  width: 28px; height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-left: 20px;
+  transition: transform var(--t-med) var(--ease), background-color var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+}
+.faq-icon svg { transition: transform var(--t-med) var(--ease); }
+.faq-a {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height var(--t-slow) var(--ease);
+}
+.faq-a-inner {
+  padding: 0 0 26px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 680px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.faq-item.is-open .faq-icon {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #FBF7F1;
+}
+.faq-item.is-open .faq-icon svg { transform: rotate(45deg); }
+.faq-item.is-open .faq-a-inner { opacity: 1; transform: translateY(0); }
+
+/* ------------------------------------------------------------------
+   Contact / final CTA
+------------------------------------------------------------------ */
+#contact {
+  background:
+    radial-gradient(60% 50% at 10% 10%, rgba(181,84,58,0.09), rgba(181,84,58,0) 70%),
+    var(--bg);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(36px, 6vw, 80px);
+  align-items: start;
+}
+.contact-copy h2 {
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.04;
+  margin-bottom: 22px;
+}
+.contact-copy p {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 440px;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+.contact-channels {
+  display: grid; gap: 14px;
+  margin-top: 8px;
+}
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  transition: transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+}
+.channel:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-2);
+  box-shadow: var(--shadow-sm);
+}
+.channel-ico {
+  width: 42px; height: 42px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  flex-shrink: 0;
+}
+.channel-main strong {
+  display: block;
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.channel-main span { font-size: 13.5px; color: var(--muted); }
+.channel .arrow {
+  margin-left: auto;
+  color: var(--muted);
+  transition: transform var(--t-med) var(--ease), color var(--t-med) var(--ease);
+}
+.channel:hover .arrow { color: var(--ink); transform: translateX(3px); }
+.channel-tg {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.channel-tg .channel-ico {
+  background: var(--accent);
+  color: #FBF7F1;
+}
+.channel-tg .channel-main strong { color: #FBF7F1; }
+.channel-tg .channel-main span { color: rgba(251,247,241,0.7); }
+.channel-tg .arrow { color: rgba(251,247,241,0.7); }
+.channel-tg:hover { background: var(--accent-ink); border-color: var(--accent-ink); transform: translateY(-2px); }
+.channel-tg:hover .arrow { color: #FBF7F1; }
+
+/* Form */
+.form-card {
+  position: relative;
+  background: #FFFDF9;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(28px, 3vw, 40px);
+  box-shadow: 0 1px 0 rgba(28,26,23,0.04), 0 18px 48px -24px rgba(28,26,23,0.18), 0 2px 6px rgba(28,26,23,0.04);
+}
+.form-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(160deg, rgba(181,84,58,0.35), rgba(28,26,23,0.06) 40%, rgba(181,84,58,0.12));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.form-card::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: clamp(24px, 3vw, 36px);
+  width: 44px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.form-card h3 {
+  font-size: clamp(24px, 2.4vw, 30px);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.form-card .form-sub {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.field {
+  position: relative;
+  margin-bottom: 16px;
+}
+.field label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 14px;
+  color: var(--muted);
+  pointer-events: none;
+  transition: transform var(--t-med) var(--ease), color var(--t-med) var(--ease), font-size var(--t-med) var(--ease);
+  background: #FFFDF9;
+  padding: 0 4px;
+}
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 16px;
+  background: #FFFDF9;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-md);
+  font-size: 15px;
+  color: var(--ink);
+  transition: border-color var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+  appearance: none;
+}
+.field textarea { min-height: 110px; resize: vertical; line-height: 1.5; }
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 4px rgba(28,26,23,0.06);
+}
+.field input:focus + label,
+.field textarea:focus + label,
+.field select:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:not(:placeholder-shown) + label,
+.field.has-value label {
+  transform: translateY(-22px) translateX(-4px);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.field select { background-image: none; }
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.field .hint {
+  display: block;
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 8px;
+  padding-left: 4px;
+}
+.form-card button[type="submit"] {
+  width: 100%;
+  margin-top: 8px;
+}
+.form-foot {
+  margin-top: 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 20px 0 4px;
+}
+.form-success .check {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.form-success h4 {
+  font-family: var(--serif);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.form-success p { color: var(--muted); font-size: 15px; }
+.form-card.is-sent .form-body { display: none; }
+.form-card.is-sent .form-success { display: block; }
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .field-row { grid-template-columns: 1fr; }
+}
+
+/* ------------------------------------------------------------------
+   Footer
+------------------------------------------------------------------ */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 48px 0 36px;
+  background: var(--bg);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.footer-inner p { font-size: 14px; color: var(--muted); }
+.footer-left { max-width: 320px; }
+.footer-left .logo { margin-bottom: 12px; }
+.footer-right {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  align-items: center;
+}
+.footer-right a {
+  color: var(--ink-2);
+  transition: color var(--t-fast) var(--ease);
+}
+.footer-right a:hover { color: var(--accent-ink); }
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ------------------------------------------------------------------
+   Testimonials
+------------------------------------------------------------------ */
+#testimonials { background: var(--bg); }
+.testimonials-wrap {
+  position: relative;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+.testimonials-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 2px 24px;
+  margin: -8px -2px 0;
+}
+.testimonials-track::-webkit-scrollbar { display: none; }
+.testimonials-track > .t-card {
+  flex: 0 0 calc(100% - 8px);
+  max-width: calc(100% - 8px);
+}
+@media (min-width: 860px) {
+  .testimonials-track > .t-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+}
+.t-card {
+  scroll-snap-align: start;
+  background: #FBF7F1;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 30px 30px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--t-med) var(--ease), transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+}
+.t-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--line-2);
+}
+.t-quote {
+  color: var(--accent);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 42px;
+  line-height: 1;
+  margin-bottom: 8px;
+  user-select: none;
+}
+.t-text {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  position: relative;
+  overflow: hidden;
+  max-height: 10.725em; /* ~6.5 lines */
+  transition: max-height var(--t-slow) var(--ease);
+  margin-bottom: 18px;
+}
+.t-text::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(251,247,241,0) 0%, #FBF7F1 90%);
+  pointer-events: none;
+  transition: opacity var(--t-med) var(--ease);
+}
+.t-card.is-open .t-text {
+  max-height: 2000px;
+}
+.t-card.is-open .t-text::after { opacity: 0; }
+.t-text p { color: inherit; margin: 0 0 10px; }
+.t-text p:last-child { margin-bottom: 0; }
+.t-toggle {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  margin-bottom: 16px;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  color: var(--accent-ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color var(--t-med) var(--ease);
+}
+.t-toggle:hover { color: var(--accent); }
+.t-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.t-toggle .t-chev {
+  display: inline-block;
+  transition: transform var(--t-med) var(--ease);
+}
+.t-card.is-open .t-chev { transform: rotate(180deg); }
+.t-meta {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.t-name {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.t-who {
+  font-size: 13px;
+  color: var(--muted);
+}
+.t-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  border-radius: 999px;
+}
+
+/* Controls */
+.t-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 18px;
+}
+.t-arrows { display: flex; gap: 10px; }
+.t-arrow {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--t-med) var(--ease), color var(--t-med) var(--ease), border-color var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.t-arrow:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+.t-arrow:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.t-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.t-arrow svg { display: block; }
+.t-dots { display: inline-flex; gap: 10px; align-items: center; }
+.t-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  background: var(--line-2);
+  cursor: pointer;
+  transition: background-color var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.t-dot:hover { background: var(--muted); }
+.t-dot.is-active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+.t-dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 640px) {
+  .testimonials-track { gap: 16px; }
+  .testimonials-track > .t-card { flex: 0 0 88%; max-width: 88%; }
+  .t-card { padding: 26px 24px 20px; }
+  .t-arrows { display: none; }
+  .t-controls { justify-content: center; }
+}
+
+/* ------------------------------------------------------------------
+   Reveal on scroll
+------------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 600ms var(--ease),
+    transform 600ms var(--ease);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 80ms; }
+.reveal-delay-2 { transition-delay: 160ms; }
+.reveal-delay-3 { transition-delay: 240ms; }
+.reveal-delay-4 { transition-delay: 320ms; }
+.reveal-delay-5 { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .chip { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==========================================================
+     NAV
+========================================================== -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo" aria-label="На главную">
+      <span class="logo-dot"></span>
+      Алина Давыдович
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#about">Обо&nbsp;мне</a>
+      <a href="#services">Направления</a>
+      <a href="#process">Как проходят</a>
+      <a href="#pricing">Цена</a>
+      <a href="#testimonials">Отзывы</a>
+      <a href="#faq">FAQ</a>
+      <span class="nav-cta">
+        <a href="#contact" class="btn btn-primary nav-cta-link">Пробный урок<span class="arrow">→</span></a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<!-- ==========================================================
+     HERO
+========================================================== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-tag reveal">
+        <span class="dot"></span>
+        Запись на пробные уроки открыта
+      </span>
+      <h1 class="reveal reveal-delay-1">
+        Английский, на&nbsp;котором <em>хочется говорить.</em>
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        Индивидуальные онлайн-занятия для детей, подростков и&nbsp;взрослых. Подготовка к&nbsp;ОГЭ и&nbsp;ЕГЭ, помощь со школьной программой и&nbsp;спокойная разговорная практика&nbsp;— без зубрёжки.
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-primary">
+          Записаться на пробный урок
+          <span class="arrow">→</span>
+        </a>
+        <a href="#process" class="btn btn-ghost">
+          Как проходят занятия
+        </a>
+      </div>
+      <div class="hero-meta reveal reveal-delay-4">
+        <div>
+          <strong>A0–B2</strong>
+          <span>уровни учеников</span>
+        </div>
+        <div>
+          <strong>8+</strong>
+          <span>возраст учеников</span>
+        </div>
+        <div>
+          <strong>60 / 90&nbsp;мин</strong>
+          <span>длительность урока</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal reveal-delay-2">
+      <img src="alina-hero.jpg" alt="Алина Давыдович — репетитор английского языка" class="hero-visual-photo" loading="eager" decoding="async">
+      <div class="hero-visual-inner" aria-hidden="true">
+        <div class="hv-top">
+          <span>One-on-one · Online</span>
+          <span>EN · RU</span>
+        </div>
+        <div>
+          <p class="hv-quote">
+            «Задача урока&nbsp;— не сделать всё правильно, а&nbsp;начать говорить.»
+          </p>
+          <div class="hv-author">Алина Давыдович</div>
+        </div>
+      </div>
+      <div class="chip chip-3">
+        <span class="chip-dot"></span>
+        Подготовка к ОГЭ и ЕГЭ
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     STRIP / marquee
+========================================================== -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>
+      Подготовка к ОГЭ <i class="sep"></i>
+      Школьная программа <i class="sep"></i>
+      Разговорный английский <i class="sep"></i>
+      Подготовка к ЕГЭ <i class="sep"></i>
+      Живая практика <i class="sep"></i>
+      Онлайн-занятия 1-на-1 <i class="sep"></i>
+      Уровни A0–B2 <i class="sep"></i>
+    </span>
+    <span>
+      Подготовка к ОГЭ <i class="sep"></i>
+      Школьная программа <i class="sep"></i>
+      Разговорный английский <i class="sep"></i>
+      Подготовка к ЕГЭ <i class="sep"></i>
+      Живая практика <i class="sep"></i>
+      Онлайн-занятия 1-на-1 <i class="sep"></i>
+      Уровни A0–B2 <i class="sep"></i>
+    </span>
+  </div>
+</div>
+
+<!-- ==========================================================
+     ABOUT
+========================================================== -->
+<section id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Обо мне</span>
+      <h2>За&nbsp;каждым учеником&nbsp;— <em>своя история.</em> За&nbsp;мной&nbsp;— индивидуальный подход к&nbsp;каждому.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <img src="alina-about.jpg" alt="Алина Давыдович&nbsp;— репетитор английского" class="about-card-photo" loading="lazy" decoding="async">
+        <div class="about-card-inner">
+          <div class="sig">Alina Davydovich</div>
+          <div class="role">English Tutor · Online</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="reveal reveal-delay-1">
+          Меня зовут Алина. Я&nbsp;занимаюсь английским с&nbsp;детьми, подростками и&nbsp;взрослыми&nbsp;— с&nbsp;теми, кому важен не&nbsp;просто учитель, а&nbsp;человек, рядом с&nbsp;которым не&nbsp;страшно ошибаться.
+        </p>
+        <p class="reveal reveal-delay-2">
+          Работаю с&nbsp;уровнями от&nbsp;A0 до&nbsp;B2: помогаю со&nbsp;школьной программой, готовлю к&nbsp;ОГЭ и&nbsp;ЕГЭ без натаскивания и&nbsp;много разговариваю на&nbsp;темах, которые интересны ученику.
+        </p>
+        <p class="reveal reveal-delay-3">
+          На&nbsp;уроке мы&nbsp;спокойно переключаемся между чтением, аудированием, письмом и&nbsp;устной речью. Навыки совершенствуются равномерно, а&nbsp;языковой барьер уходит быстрее, чем при&nbsp;упоре только на&nbsp;грамматику.
+        </p>
+        <p class="reveal reveal-delay-3">
+          Окончила МПГУ по&nbsp;направлению &laquo;Преподаватель иностранных языков: английский и&nbsp;немецкий&raquo;&nbsp;— так что методика для&nbsp;меня не&nbsp;импровизация, а&nbsp;фундамент.
+        </p>
+        <div class="about-stats reveal reveal-delay-4">
+          <div><strong>от&nbsp;2000&nbsp;₽</strong><span>за&nbsp;занятие</span></div>
+          <div><strong>60 / 90&nbsp;мин</strong><span>на&nbsp;выбор</span></div>
+          <div><strong>1&nbsp;на&nbsp;1</strong><span>только индивидуально</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     SERVICES
+========================================================== -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">С чем я помогаю</span>
+      <h2>Три направления&nbsp;— под&nbsp;разные цели.</h2>
+      <p>Можно сосредоточиться на&nbsp;одном, можно совмещать&nbsp;— решаем под задачу ученика.</p>
+    </div>
+
+    <div class="offers">
+      <article class="offer reveal">
+        <span class="offer-num">01</span>
+        <div class="offer-icon" aria-hidden="true">
+          <!-- icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>
+        </div>
+        <h3>Подготовка к&nbsp;ОГЭ и&nbsp;ЕГЭ</h3>
+        <p>
+          Разбираем формат экзамена и&nbsp;прорабатываем каждую часть&nbsp;— отдельно и&nbsp;в&nbsp;целом. Учимся укладываться во&nbsp;временные рамки, чётко формулировать ответ и&nbsp;спокойно держаться на&nbsp;устной части.
+        </p>
+      </article>
+
+      <article class="offer reveal reveal-delay-1">
+        <span class="offer-num">02</span>
+        <div class="offer-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18"/><path d="M5 5v14h14V5"/><path d="M9 10h6M9 14h4"/></svg>
+        </div>
+        <h3>Школьная программа</h3>
+        <p>
+          Разбираем темы, которые не&nbsp;сложились в&nbsp;школе, закрываем пробелы и&nbsp;выравниваем оценки. Спокойный темп, без зубрёжки и&nbsp;авральной подготовки накануне контрольной.
+        </p>
+      </article>
+
+      <article class="offer reveal reveal-delay-2">
+        <span class="offer-num">03</span>
+        <div class="offer-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3V4Z"/><path d="M8 9h8M8 12h5"/></svg>
+        </div>
+        <h3>Разговорный английский</h3>
+        <p>
+          Учимся думать на&nbsp;английском, а&nbsp;не&nbsp;переводить фразы в&nbsp;голове. Темы совпадают с&nbsp;возрастом и&nbsp;интересами ученика&nbsp;— так языковой барьер уходит быстрее всего.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     AUDIENCE
+========================================================== -->
+<section id="audience">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Для кого</span>
+      <h2>Это про вас?</h2>
+    </div>
+
+    <div class="audience">
+      <article class="aud-card reveal">
+        <span class="aud-age">Дети · от 8 лет</span>
+        <h3>Школьники младших и&nbsp;средних классов</h3>
+        <p>
+          Важно не&nbsp;отбить интерес, а&nbsp;выстроить базу и&nbsp;спокойно идти по&nbsp;школьной программе&nbsp;— без застревания на&nbsp;каждой теме.
+        </p>
+        <ul>
+          <li>Можно начинать с&nbsp;нуля (A0)</li>
+          <li>Поддержка по&nbsp;школьной программе</li>
+          <li>Мягкий темп, без давления</li>
+        </ul>
+      </article>
+
+      <article class="aud-card reveal reveal-delay-1">
+        <span class="aud-age">Подростки</span>
+        <h3>Ученики 8–11&nbsp;классов</h3>
+        <p>
+          Готовимся к&nbsp;ОГЭ и&nbsp;ЕГЭ, подтягиваем грамматику и&nbsp;устную часть. Цель&nbsp;— чтобы к&nbsp;экзамену вы&nbsp;подошли без паники и&nbsp;с&nbsp;предсказуемым результатом.
+        </p>
+        <ul>
+          <li>Формат ОГЭ и&nbsp;ЕГЭ</li>
+          <li>Устная часть и&nbsp;разговорные навыки</li>
+          <li>Честная обратная связь по&nbsp;каждой теме</li>
+        </ul>
+      </article>
+
+      <article class="aud-card reveal reveal-delay-2">
+        <span class="aud-age">Взрослые</span>
+        <h3>Те, кто возвращается к&nbsp;языку</h3>
+        <p>
+          Работа, путешествия, учёба или&nbsp;просто «для себя»&nbsp;— все причины уместны. Начинаем с&nbsp;вашего текущего уровня и&nbsp;двигаемся в&nbsp;удобном для вас темпе.
+        </p>
+        <ul>
+          <li>Уровни от&nbsp;A0 до&nbsp;B2</li>
+          <li>Практика речи на&nbsp;каждом уроке</li>
+          <li>Темы, связанные с&nbsp;вашей жизнью</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     PROCESS
+========================================================== -->
+<section id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Как проходят уроки</span>
+      <h2>Спокойный ритм, в&nbsp;котором знания укладываются.</h2>
+      <p>Занятие&nbsp;— не&nbsp;один большой блок грамматики, а&nbsp;плавное чередование навыков. Так внимание не&nbsp;устаёт, а&nbsp;прогресс становится заметнее быстрее.</p>
+    </div>
+
+    <div class="process">
+      <div class="process-list">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div>
+            <h4>Тёплый старт</h4>
+            <p>Начинаем с&nbsp;короткого разговора&nbsp;— чтобы плавно подготовить мозг для работы на&nbsp;иностранном языке и&nbsp;снять напряжение первых минут.</p>
+          </div>
+        </div>
+        <div class="step reveal reveal-delay-1">
+          <div class="step-num">02</div>
+          <div>
+            <h4>Основная работа</h4>
+            <p>Разбираем тему дня: грамматику, лексику или формат экзамена&nbsp;— на&nbsp;живых примерах, а&nbsp;не&nbsp;через сухие правила.</p>
+          </div>
+        </div>
+        <div class="step reveal reveal-delay-2">
+          <div class="step-num">03</div>
+          <div>
+            <h4>Все виды речи по&nbsp;кругу</h4>
+            <p>Чтение, аудирование, письмо и&nbsp;устная речь сменяют друг друга в&nbsp;одном занятии&nbsp;— так навыки формируются равномерно.</p>
+          </div>
+        </div>
+        <div class="step reveal reveal-delay-3">
+          <div class="step-num">04</div>
+          <div>
+            <h4>Итог и&nbsp;домашнее</h4>
+            <p>В&nbsp;конце подводим короткий итог и&nbsp;отмечаем, что стало понятнее. Домашнее задание&nbsp;— письменное и&nbsp;устное, в&nbsp;разумном объёме.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="process-aside reveal reveal-delay-2">
+        <h4>Что вы&nbsp;почувствуете на&nbsp;уроке</h4>
+        <p>
+          Я&nbsp;сознательно слежу за&nbsp;атмосферой. Это не&nbsp;школьный опрос:
+          можно ошибаться, переспрашивать, думать вслух. Только в&nbsp;такой
+          обстановке язык начинает работать по-настоящему.
+        </p>
+        <ul>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Спокойный, уважительный тон
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Темы под возраст и&nbsp;уровень ученика
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Всегда понятно, что мы&nbsp;делаем и&nbsp;зачем
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            Честная обратная связь&nbsp;— без давления и&nbsp;обесценивания
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     WHY ME
+========================================================== -->
+<section id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Почему именно ко&nbsp;мне</span>
+      <h2>Не&nbsp;ради красивых обещаний&nbsp;— ради результата.</h2>
+    </div>
+
+    <div class="why">
+      <article class="why-card reveal">
+        <div class="why-ico" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg>
+        </div>
+        <h4>Методика под человека, а&nbsp;не&nbsp;под учебник</h4>
+        <p>
+          Темы и&nbsp;материалы подбираю под уровень и&nbsp;интересы ученика.
+          Это не&nbsp;мелочь&nbsp;— именно так язык начинает двигаться быстрее.
+        </p>
+      </article>
+
+      <article class="why-card reveal reveal-delay-1">
+        <div class="why-ico" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+        </div>
+        <h4>Баланс всех видов речевой деятельности</h4>
+        <p>
+          На&nbsp;уроке работают все навыки: чтение, аудирование, письмо и&nbsp;устная речь.
+          Переключаемся аккуратно, чтобы ничего не&nbsp;оставалось в&nbsp;тени.
+        </p>
+      </article>
+
+      <article class="why-card reveal reveal-delay-2">
+        <div class="why-ico" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9a9 9 0 0 1 9 9Z"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h4>Опыт с&nbsp;разными возрастами</h4>
+        <p>
+          Работаю с&nbsp;детьми от&nbsp;8&nbsp;лет, с&nbsp;подростками и&nbsp;со&nbsp;взрослыми.
+          Вижу, что уместно для&nbsp;каждого возраста, а&nbsp;что звучит слишком
+          по-школьному.
+        </p>
+      </article>
+
+      <article class="why-card reveal reveal-delay-3">
+        <div class="why-ico" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+        </div>
+        <h4>Понятная структура занятий</h4>
+        <p>
+          Нет ощущения, что урок прошёл впустую. Всегда понятно,
+          куда мы&nbsp;движемся, что уже получается и&nbsp;что ещё впереди.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     PRICING
+========================================================== -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Цена и формат</span>
+      <h2>Один формат, прозрачная цена&nbsp;— без пакетов и&nbsp;подписок.</h2>
+    </div>
+
+    <div class="pricing">
+      <div class="price-card reveal">
+        <span class="price-tag">Индивидуальное занятие</span>
+        <div class="price-amount">
+          <span class="num">2000&nbsp;₽</span>
+          <span class="unit">/ 60&nbsp;минут</span>
+        </div>
+        <div class="price-alt">
+          <span>или 2500&nbsp;₽</span>
+          <span class="price-alt-unit">/ 90&nbsp;минут</span>
+        </div>
+        <p>
+          Онлайн, один на&nbsp;один. Длительность на&nbsp;выбор&nbsp;— 60 или 90&nbsp;минут.
+          Программа строится под цель: школа, экзамен или разговорный английский.
+          Оплата после урока&nbsp;— переводом на&nbsp;карту по&nbsp;номеру телефона.
+        </p>
+        <ul class="price-features">
+          <li>Два формата длительности&nbsp;— 60 или 90&nbsp;минут</li>
+          <li>Материалы и&nbsp;домашнее задание&nbsp;— включены</li>
+          <li>Гибкое расписание по&nbsp;договорённости</li>
+          <li>Начинаем с&nbsp;пробного урока&nbsp;— решение после него</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">
+          Записаться на пробный урок
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="price-notes reveal reveal-delay-1">
+        <h3>Что входит в&nbsp;занятие</h3>
+        <p>
+          Один урок&nbsp;— это не&nbsp;только время в&nbsp;видеосвязи, а&nbsp;и&nbsp;всё, что вокруг него.
+        </p>
+        <ul>
+          <li>
+            <div>
+              <strong>Индивидуальная программа</strong>
+              Подбираю материалы под уровень, возраст и&nbsp;цель&nbsp;— без универсальных учебников на&nbsp;все случаи.
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Домашнее с&nbsp;разбором</strong>
+              Каждое задание смотрю заранее&nbsp;— чтобы на&nbsp;уроке работать с&nbsp;реальными ошибками, а&nbsp;не&nbsp;со&nbsp;случайными.
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Гибкое расписание</strong>
+              Время и&nbsp;частоту занятий подбираем под ваш график. Обычно&nbsp;— два раза в&nbsp;неделю.
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Пробный урок&nbsp;— без обязательств</strong>
+              На&nbsp;первой встрече знакомимся и&nbsp;определяем уровень. Решение о&nbsp;дальнейшей работе&nbsp;— после.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     FAQ
+========================================================== -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <span class="eyebrow" style="margin-left:auto; margin-right:auto;">Частые вопросы</span>
+      <h2 style="max-width: 620px; margin: 0 auto;">Коротко о&nbsp;том, что чаще всего спрашивают до&nbsp;старта.</h2>
+    </div>
+
+    <div class="faq-wrap">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">
+          Есть ли&nbsp;домашнее задание?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          Да, домашнее задание есть&nbsp;— и&nbsp;письменное, и&nbsp;устное.
+          Присылайте минимум за&nbsp;12&nbsp;часов до&nbsp;занятия, а&nbsp;лучше
+          за&nbsp;сутки&nbsp;— чтобы я&nbsp;успела посмотреть работу и&nbsp;подготовить
+          разбор.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q" aria-expanded="false">
+          Можно ли&nbsp;отменить занятие день в&nbsp;день?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          Отменить без оплаты можно не&nbsp;позднее чем за&nbsp;12&nbsp;часов до&nbsp;занятия.
+          При более поздней отмене урок оплачивается на&nbsp;50%&nbsp;— время
+          уже забронировано и&nbsp;подготовлено.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-q" aria-expanded="false">
+          Как оплачивать занятия?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          Оплата&nbsp;— до&nbsp;занятия или сразу после, переводом на&nbsp;карту
+          по&nbsp;номеру телефона. Реквизиты пришлю в&nbsp;Telegram при записи.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-q" aria-expanded="false">
+          С&nbsp;какого уровня можно начинать?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          С&nbsp;любого. Беру с&nbsp;A0 (полный ноль) и&nbsp;довожу до&nbsp;уверенного B2.
+          Если вы&nbsp;не&nbsp;знаете свой уровень&nbsp;— на&nbsp;пробном уроке
+          мы&nbsp;спокойно его определим.
+        </div></div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-4">
+        <button class="faq-q" aria-expanded="false">
+          На&nbsp;какой платформе проходят занятия?
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          Онлайн, на&nbsp;удобной для&nbsp;ученика платформе видеосвязи.
+          Все материалы и&nbsp;задания&nbsp;— в&nbsp;цифровом виде: распечатывать
+          ничего не&nbsp;нужно.
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     TESTIMONIALS
+========================================================== -->
+<section id="testimonials" aria-label="Отзывы учеников">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Отзывы</span>
+      <h2>Что говорят ученики&nbsp;и&nbsp;родители.</h2>
+      <p>Реальные истории людей, с&nbsp;которыми мы вместе работаем над языком.</p>
+    </div>
+
+    <div class="testimonials-wrap reveal reveal-delay-1">
+      <div class="testimonials-track" id="t-track" tabindex="0" role="region" aria-roledescription="карусель отзывов" aria-label="Отзывы">
+
+        <!-- Testimonial 1 -->
+        <article class="t-card">
+          <div class="t-quote" aria-hidden="true">&ldquo;</div>
+          <div class="t-text" id="t-text-1">
+            <p>Официально: самые лучшие уроки!</p>
+            <p>Хочу выразить огромную благодарность Алине Артемовне за&nbsp;наши занятия.</p>
+            <p>Я&nbsp;пришла с&nbsp;запросом свободно говорить на&nbsp;английском и&nbsp;расширять свой словарный запас. На&nbsp;уроках мы обсуждаем фильмы, поп-культуру, новости и&nbsp;многое другое. При&nbsp;этом у&nbsp;меня не&nbsp;только вырос словарный запас, но&nbsp;и&nbsp;подтянулась грамматика. В&nbsp;ходе обсуждения всегда обращаем внимание на&nbsp;неточности и&nbsp;разбираемся, как сказать правильно. Я&nbsp;не&nbsp;думала, что учить язык может быть так увлекательно.</p>
+            <p>Алина Артемовна&nbsp;— чудесный педагог. Открытая, эмпатичная, внимательная. Помогает разобраться даже с&nbsp;самыми зубодробительными темами и&nbsp;всегда подаёт материал разнообразно и&nbsp;интересно.</p>
+            <p>Спасибо!</p>
+          </div>
+          <button type="button" class="t-toggle" aria-expanded="false" aria-controls="t-text-1">
+            <span class="t-label">Читать полностью</span>
+            <svg class="t-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="t-meta">
+            <span class="t-name">Ольга</span>
+            <span class="t-who">ученица, 22&nbsp;года</span>
+            <span class="t-tag">Разговорный английский</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 2 -->
+        <article class="t-card">
+          <div class="t-quote" aria-hidden="true">&ldquo;</div>
+          <div class="t-text" id="t-text-2">
+            <p>Я&nbsp;занималась с&nbsp;Алиной английским сначала под задачу, а&nbsp;в&nbsp;итоге осталась с&nbsp;ней и&nbsp;после. Она очень внимательно относится к&nbsp;запросу ученика: всегда уточняет детали, задаёт вопросы о&nbsp;целях и&nbsp;задачах, об&nbsp;интересных темах, и&nbsp;под это выстраивает программу.</p>
+            <p>Мне нужно было всего за&nbsp;месяц подготовиться к&nbsp;проведению зарубежной конференции: хотелось чувствовать себя увереннее, расширить словарный запас за&nbsp;счёт специализированной лексики и&nbsp;&laquo;разговориться&raquo;. Алина с&nbsp;этим отлично справилась, она учитывала все нюансы, подбирала лексику под специфику моей задачи и&nbsp;каждый раз готовила новые материалы к&nbsp;урокам.</p>
+            <p>Конференция прошла успешно, я&nbsp;уверенно общалась с&nbsp;иностранными коллегами и&nbsp;не&nbsp;терялась в&nbsp;профессиональных обсуждениях. После этого мне не&nbsp;захотелось заканчивать занятия. В&nbsp;итоге мы уже около трёх месяцев продолжаем заниматься в&nbsp;формате раз в&nbsp;неделю, и&nbsp;Алина по-прежнему остаётся тем преподавателем, с&nbsp;которым приятно и&nbsp;эффективно поддерживать уровень языка и&nbsp;постепенно его улучшать.</p>
+          </div>
+          <button type="button" class="t-toggle" aria-expanded="false" aria-controls="t-text-2">
+            <span class="t-label">Читать полностью</span>
+            <svg class="t-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="t-meta">
+            <span class="t-name">Екатерина</span>
+            <span class="t-who">ученица, 27&nbsp;лет</span>
+            <span class="t-tag">Подготовка к&nbsp;зарубежной конференции</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 3 -->
+        <article class="t-card">
+          <div class="t-quote" aria-hidden="true">&ldquo;</div>
+          <div class="t-text" id="t-text-3">
+            <p>Спасибо большое Алине Артемовне за&nbsp;работу с&nbsp;дочерью! Самое главное&nbsp;— дочь стала увереннее в&nbsp;себе, пропала тревожность, уроки перестали быть чем-то страшным.</p>
+            <p>Оля отмечает, что у&nbsp;неё стало всё получаться: &laquo;оказывается, я&nbsp;это умею, мы читали и&nbsp;переводили текст на&nbsp;уроке, я&nbsp;сама вызвалась, поняла и&nbsp;перевела весь текст&raquo;. Учитель стала хвалить дочь, удивительно, но&nbsp;теперь и&nbsp;ей самой хочется учить больше и&nbsp;достигать больше, когда пришло понимание основ и&nbsp;правил английского языка. Пробелы восполнены.</p>
+            <p>Очень благодарна Алине Артемовне за&nbsp;занятия! Будем продолжать заниматься дальше, вижу отличный результат. Даже не&nbsp;только оценки улучшились, но&nbsp;и&nbsp;само ощущение дочери, отношение к&nbsp;учёбе. Положительный опыт. Спасибо!</p>
+          </div>
+          <button type="button" class="t-toggle" aria-expanded="false" aria-controls="t-text-3">
+            <span class="t-label">Читать полностью</span>
+            <svg class="t-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="t-meta">
+            <span class="t-name">Наталья</span>
+            <span class="t-who">мама ученицы, 7&nbsp;класс</span>
+            <span class="t-tag">Подготовка по&nbsp;школьной программе</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 4 -->
+        <article class="t-card">
+          <div class="t-quote" aria-hidden="true">&ldquo;</div>
+          <div class="t-text" id="t-text-4">
+            <p>Я&nbsp;занимаюсь с&nbsp;Алиной около полугода, и&nbsp;за&nbsp;это время произошли заметные изменения в&nbsp;уровне моих знаний. Этот язык я&nbsp;решила изучать для себя, а&nbsp;не&nbsp;для школьных экзаменов, и&nbsp;за&nbsp;эти полгода у&nbsp;меня прибавилось знаний грамматики, пополнился активный словарный запас и&nbsp;самое главное для меня&nbsp;— я&nbsp;стала увереннее разговаривать на&nbsp;языке, перестала стесняться.</p>
+            <p>Алина подстраивает программу под конкретные запросы, что является очень важным для каждого ученика. Сами занятия проходят в&nbsp;очень тёплой, приятной и&nbsp;дружеской атмосфере. Много тематических заданий, постоянные обсуждения и&nbsp;интересные темы уроков!</p>
+          </div>
+          <button type="button" class="t-toggle" aria-expanded="false" aria-controls="t-text-4">
+            <span class="t-label">Читать полностью</span>
+            <svg class="t-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="t-meta">
+            <span class="t-name">Ира</span>
+            <span class="t-who">ученица, 1&nbsp;курс</span>
+            <span class="t-tag">Повышение уровня языка</span>
+          </div>
+        </article>
+
+        <!-- Testimonial 5 -->
+        <article class="t-card">
+          <div class="t-quote" aria-hidden="true">&ldquo;</div>
+          <div class="t-text" id="t-text-5">
+            <p>За&nbsp;полгода занятий с&nbsp;Алиной мой уровень английского заметно вырос: подтянулась грамматика, расширился словарный запас, я&nbsp;перестала бояться ошибок и&nbsp;начала уверенно говорить.</p>
+            <p>Для меня очень важна поддержка Алины и&nbsp;та хорошая доверительная атмосфера, которую она создаёт. Алина очень понятно объясняет материал и&nbsp;креативно подходит к&nbsp;объяснению вопросов, всегда остаётся на&nbsp;одной волне. С&nbsp;ней очень легко и&nbsp;комфортно идти к&nbsp;цели.</p>
+          </div>
+          <button type="button" class="t-toggle" aria-expanded="false" aria-controls="t-text-5">
+            <span class="t-label">Читать полностью</span>
+            <svg class="t-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="t-meta">
+            <span class="t-name">Таисия</span>
+            <span class="t-who">ученица, 8&nbsp;класс</span>
+            <span class="t-tag">Подготовка по&nbsp;школьной программе</span>
+          </div>
+        </article>
+
+      </div><!-- /.testimonials-track -->
+
+      <div class="t-controls" aria-label="Управление каруселью">
+        <div class="t-dots" id="t-dots" role="tablist" aria-label="Перейти к&nbsp;отзыву"></div>
+        <div class="t-arrows">
+          <button type="button" class="t-arrow" id="t-prev" aria-label="Предыдущий отзыв">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button type="button" class="t-arrow" id="t-next" aria-label="Следующий отзыв">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     CONTACT / CTA
+========================================================== -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-copy">
+        <span class="eyebrow reveal">Связаться</span>
+        <h2 class="reveal reveal-delay-1">Запишитесь на&nbsp;пробный урок&nbsp;— посмотрим, подходим&nbsp;ли друг другу.</h2>
+        <p class="reveal reveal-delay-2">
+          Оставьте заявку в&nbsp;форме или напишите в&nbsp;Telegram&nbsp;— как удобнее.
+          Отвечу в&nbsp;течение дня: предложу время и&nbsp;коротко расскажу, как всё устроено.
+        </p>
+
+        <div class="contact-channels">
+          <a href="https://t.me/alinadavydovich" class="channel channel-tg reveal reveal-delay-3" target="_blank" rel="noopener">
+            <span class="channel-ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.5 4.5 2.7 11.9c-1.3.5-1.3 1.2-.3 1.5l4.8 1.5 11.1-7c.5-.3 1-.1.6.2L9.9 15.2l-.4 5.4c.5 0 .7-.2 1-.5l2.4-2.3 5 3.7c.9.5 1.6.2 1.8-.9l3.2-15c.3-1.4-.5-2-1.4-1.6Z"/>
+              </svg>
+            </span>
+            <div class="channel-main">
+              <strong>Telegram · @alinadavydovich</strong>
+              <span>Самый быстрый способ связаться</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+          <a href="#form" class="channel reveal reveal-delay-4">
+            <span class="channel-ico" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 6 8 7 8-7"/></svg>
+            </span>
+            <div class="channel-main">
+              <strong>Заявка через форму</strong>
+              <span>Опишите задачу&nbsp;— я&nbsp;отвечу с&nbsp;предложением по&nbsp;времени</span>
+            </div>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="form-card reveal reveal-delay-2" id="form">
+        <div class="form-body">
+          <h3>Заявка на&nbsp;пробный урок</h3>
+          <p class="form-sub">Оставьте имя и&nbsp;удобный способ связи. Я&nbsp;напишу в&nbsp;течение дня.</p>
+
+          <!--
+            FORM EMAIL DELIVERY
+            Чтобы заявки реально уходили на alina05012@mail.ru, нужно один раз:
+            1) зайти на https://formspree.io/ и зарегистрироваться на alina05012@mail.ru;
+            2) создать new form, в письме-подтверждении кликнуть ссылку activate;
+            3) скопировать endpoint вида https://formspree.io/f/XXXXXXXX
+               и вставить вместо FORMSPREE_ENDPOINT ниже.
+            До этого форма автоматически откроет почтовый клиент ученика с готовым
+            письмом (mailto fallback), чтобы ни одна заявка не терялась.
+          -->
+          <form id="leadForm" action="https://formspree.io/f/xnjlozlr" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Заявка на пробный урок — с сайта">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+            <div class="field">
+              <input type="text" id="f-name" name="name" placeholder=" " autocomplete="name" required>
+              <label for="f-name">Как к&nbsp;вам обращаться</label>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <input type="text" id="f-contact" name="contact" placeholder=" " required>
+                <label for="f-contact">Telegram / телефон / e-mail</label>
+              </div>
+              <div class="field">
+                <select id="f-who" name="who" required>
+                  <option value="" disabled selected></option>
+                  <option>Для&nbsp;ребёнка (8+)</option>
+                  <option>Для&nbsp;подростка (ОГЭ/ЕГЭ)</option>
+                  <option>Для&nbsp;себя, взрослый</option>
+                  <option>Пока не&nbsp;знаю</option>
+                </select>
+                <label for="f-who">Кто будет заниматься</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <textarea id="f-msg" name="message" placeholder=" "></textarea>
+              <label for="f-msg">Коротко: цель, уровень, удобное время</label>
+              <span class="hint">Необязательно&nbsp;— но&nbsp;помогает подобрать формат точнее.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Отправить заявку
+              <span class="arrow">→</span>
+            </button>
+            <p class="form-foot">Нажимая кнопку, вы&nbsp;соглашаетесь на&nbsp;обработку контактных данных&nbsp;— только для&nbsp;того, чтобы я&nbsp;могла с&nbsp;вами связаться.</p>
+          </form>
+        </div>
+
+        <div class="form-success" aria-live="polite">
+          <div class="check" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <h4>Заявка отправлена</h4>
+          <p>Спасибо. Отвечу в&nbsp;течение дня и&nbsp;предложу удобное время.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#" class="logo">
+          <span class="logo-dot"></span>
+          Алина Давыдович
+        </a>
+        <p>Репетитор английского языка. Онлайн-занятия для&nbsp;детей, подростков и&nbsp;взрослых. Уровни A0–B2.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#about">Обо&nbsp;мне</a>
+        <a href="#services">Направления</a>
+        <a href="#process">Как проходят</a>
+        <a href="#pricing">Цена</a>
+        <a href="#testimonials">Отзывы</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://t.me/alinadavydovich" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 · Алина Давыдович</span>
+      <span>Онлайн · Индивидуально · от&nbsp;2000&nbsp;₽ / 60 или 90&nbsp;мин</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------------- Nav scroll state ----------------
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 8) nav.classList.add('is-scrolled');
+    else nav.classList.remove('is-scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ---------------- Reveal on scroll ----------------
+  const revealEls = document.querySelectorAll('.reveal');
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  }
+
+  // ---------------- Testimonials carousel ----------------
+  const tTrack = document.getElementById('t-track');
+  if (tTrack) {
+    const cards = Array.from(tTrack.querySelectorAll('.t-card'));
+    const prevBtn = document.getElementById('t-prev');
+    const nextBtn = document.getElementById('t-next');
+    const dotsWrap = document.getElementById('t-dots');
+
+    // Expand / collapse with smooth height animation
+    cards.forEach(card => {
+      const text = card.querySelector('.t-text');
+      const btn = card.querySelector('.t-toggle');
+      const label = btn.querySelector('.t-label');
+      const collapsedMax = () => parseFloat(getComputedStyle(text).maxHeight) || text.clientHeight;
+
+      // Hide toggle if the content doesn't actually overflow
+      requestAnimationFrame(() => {
+        if (text.scrollHeight <= text.clientHeight + 2) {
+          btn.style.display = 'none';
+        }
+      });
+
+      btn.addEventListener('click', () => {
+        const isOpen = card.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        label.textContent = isOpen ? 'Свернуть' : 'Читать полностью';
+        if (isOpen) {
+          text.style.maxHeight = text.scrollHeight + 'px';
+        } else {
+          // Smoothly collapse back from explicit height to CSS default
+          text.style.maxHeight = text.scrollHeight + 'px';
+          // force reflow
+          void text.offsetHeight;
+          text.style.maxHeight = '';
+        }
+      });
+    });
+
+    // Recalculate opened card on resize
+    window.addEventListener('resize', () => {
+      cards.forEach(card => {
+        if (card.classList.contains('is-open')) {
+          const text = card.querySelector('.t-text');
+          text.style.maxHeight = text.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Build dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 't-dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Отзыв ${i + 1} из ${cards.length}`);
+      dot.addEventListener('click', () => scrollToIndex(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.querySelectorAll('.t-dot'));
+
+    const getIndex = () => {
+      // Find the card whose left edge is closest to the track's scrollLeft
+      const sl = tTrack.scrollLeft;
+      let bestIdx = 0;
+      let bestDist = Infinity;
+      cards.forEach((c, i) => {
+        const d = Math.abs(c.offsetLeft - tTrack.offsetLeft - sl);
+        if (d < bestDist) { bestDist = d; bestIdx = i; }
+      });
+      return bestIdx;
+    };
+
+    const scrollToIndex = (i) => {
+      const target = cards[i];
+      if (!target) return;
+      tTrack.scrollTo({ left: target.offsetLeft - tTrack.offsetLeft, behavior: prefersReduced ? 'auto' : 'smooth' });
+    };
+
+    const updateState = () => {
+      const i = getIndex();
+      dots.forEach((d, di) => d.classList.toggle('is-active', di === i));
+      // On desktop 2 cards fit — disable arrows if everything is visible
+      const allVisible = tTrack.scrollWidth <= tTrack.clientWidth + 4;
+      prevBtn.disabled = allVisible || tTrack.scrollLeft <= 2;
+      nextBtn.disabled = allVisible || tTrack.scrollLeft + tTrack.clientWidth >= tTrack.scrollWidth - 2;
+    };
+
+    prevBtn.addEventListener('click', () => scrollToIndex(Math.max(0, getIndex() - 1)));
+    nextBtn.addEventListener('click', () => scrollToIndex(Math.min(cards.length - 1, getIndex() + 1)));
+
+    let scrollTimer;
+    tTrack.addEventListener('scroll', () => {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(updateState, 80);
+    }, { passive: true });
+
+    // Keyboard navigation on the track
+    tTrack.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); scrollToIndex(Math.min(cards.length - 1, getIndex() + 1)); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); scrollToIndex(Math.max(0, getIndex() - 1)); }
+      else if (e.key === 'Home') { e.preventDefault(); scrollToIndex(0); }
+      else if (e.key === 'End') { e.preventDefault(); scrollToIndex(cards.length - 1); }
+    });
+
+    window.addEventListener('resize', updateState);
+    updateState();
+  }
+
+  // ---------------- FAQ accordion ----------------
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const ans = item.querySelector('.faq-a');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      // close all
+      document.querySelectorAll('.faq-item.is-open').forEach(other => {
+        other.classList.remove('is-open');
+        other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+  // recalc open panel on resize
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.faq-item.is-open .faq-a').forEach(ans => {
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    });
+  });
+
+  // ---------------- Floating labels (select support) ----------------
+  document.querySelectorAll('.field select').forEach(sel => {
+    const updateState = () => {
+      if (sel.value) sel.parentElement.classList.add('has-value');
+      else sel.parentElement.classList.remove('has-value');
+    };
+    sel.addEventListener('change', updateState);
+    updateState();
+  });
+
+  // ---------------- Form ----------------
+  // Заявки уходят на alina05012@mail.ru. Основной путь—Formspree (тихо, без перехода на другую страницу),
+  // резервный—mailto: письмо, чтобы ни одна заявка не терялась, пока Formspree не настроен.
+  const form = document.getElementById('leadForm');
+  const card = document.querySelector('.form-card');
+  const OWNER_EMAIL = 'alina05012@mail.ru';
+  const FORMSPREE_CONFIGURED = form.action && form.action.indexOf('FORMSPREE_ENDPOINT') === -1;
+
+  function buildMailtoLink(payload) {
+    const subject = 'Заявка на пробный урок — с сайта';
+    const lines = [
+      'Имя: ' + payload.name,
+      'Контакт: ' + payload.contact,
+      'Кто будет заниматься: ' + payload.who,
+      '',
+      'Сообщение:',
+      payload.message || '(не указано)'
+    ];
+    return 'mailto:' + OWNER_EMAIL
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(lines.join('\n'));
+  }
+
+  function showSuccess() {
+    card.classList.add('is-sent');
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const nameEl = form.querySelector('#f-name');
+    const contactEl = form.querySelector('#f-contact');
+    const whoEl = form.querySelector('#f-who');
+    const msgEl = form.querySelector('#f-msg');
+
+    let ok = true;
+    [nameEl, contactEl, whoEl].forEach(el => {
+      if (!el.value || !el.value.trim()) {
+        el.style.borderColor = '#B5543A';
+        ok = false;
+      } else {
+        el.style.borderColor = '';
+      }
+    });
+    if (!ok) return;
+
+    const payload = {
+      name: nameEl.value.trim(),
+      contact: contactEl.value.trim(),
+      who: whoEl.value.trim(),
+      message: msgEl.value.trim()
+    };
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Отправляем…';
+
+    // Если Formspree настроен—отправляем тихо, fetch + JSON.
+    if (FORMSPREE_CONFIGURED) {
+      try {
+        const fd = new FormData();
+        fd.append('name', payload.name);
+        fd.append('contact', payload.contact);
+        fd.append('who', payload.who);
+        fd.append('message', payload.message);
+        // Если контакт похож на e-mail — прокидываем его как email,
+        // чтобы можно было ответить прямо из письма (и чтобы Formspree не помечал как спам).
+        const emailMatch = payload.contact.match(/[^\s,;<>()"']+@[^\s,;<>()"']+\.[^\s,;<>()"']+/);
+        if (emailMatch) {
+          fd.append('email', emailMatch[0]);
+        }
+
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: fd,
+          headers: { Accept: 'application/json' }
+        });
+
+        if (res.ok) {
+          showSuccess();
+          return;
+        }
+      } catch (err) {
+        // падаем в mailto fallback
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalLabel;
+      }
+    }
+
+    // Fallback: открываем почтовый клиент с готовым письмом.
+    window.location.href = buildMailtoLink(payload);
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalLabel;
+    // Показываем успех через момент—почтовый клиент уже открывается.
+    setTimeout(showSuccess, 400);
+  });
+})();
+</script>
+</body>
+</html>
